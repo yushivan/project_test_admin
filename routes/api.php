@@ -13,5 +13,8 @@ Route::get('/user', function (Request $request) {
 
 Route::post('/customer', [CustomerController::class, 'store']);
 Route::get('/customer/verify/{id}', [CustomerController::class, 'verify']);
+Route::post('/customer/login', [CustomerController::class, 'login']);
+
 Route::post('/permohonan-ktp', [PermohonanKtpController::class, 'store']);
+
 Route::post('/perizinan-usaha', [PerizinanUsahaController::class, 'store']);

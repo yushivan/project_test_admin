@@ -15,6 +15,7 @@ class Customer extends Model
         'email',
         'nomor_hp',
         'verifikasi',
+        'password',
     ];
 
     public function permohonanKtps()

@@ -108,7 +108,7 @@ class CustomerController extends Controller
 
         $customer = Customer::where('email', $request->email)->first();
 
-        if (!$customer || !\Illuminate\Support\Facades\Hash::check($request->password, $customer->password)) {
+        if (!$customer || !Hash::check($request->password, $customer->password)) {
             return response()->json([
                 'success' => false,
                 'message' => 'Email atau password salah.',
